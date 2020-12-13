@@ -31,10 +31,15 @@ describe('headline Component', () => {
       expect(description.length).toBe(1);
     });
   });
-  //   describe('without props', () => {
-  //     let wrapper;
-  //     beforeEach(() => {
-  //       wrapper = setUp();
-  //     });
-  //   });
+  describe('without props', () => {
+    let wrapper;
+    beforeEach(() => {
+      wrapper = setUp();
+    });
+
+    it('should not render', () => {
+      let component = findByTestAttr(wrapper, 'headlineComponent');
+      expect(component.length).toBe(0);
+    });
+  });
 });
