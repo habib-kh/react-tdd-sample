@@ -3,15 +3,19 @@ import Header from './components/header/header';
 
 import './App.scss';
 import Headline from './components/headline/headline';
+import { Provider } from 'react-redux';
+import store from './store/createStore';
 
 function App() {
   return (
-    <div className='App'>
-      <Header />
-      <div className='main'>
-        <Headline header='posts' desc='click the button to see the post' />
+    <Provider store={store}>
+      <div className='App'>
+        <Header />
+        <div className='main'>
+          <Headline header={1} desc='click the button to see the post' />
+        </div>
       </div>
-    </div>
+    </Provider>
   );
 }
 

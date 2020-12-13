@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 
 function Headline(props) {
   const { header, desc } = props;
@@ -12,5 +13,10 @@ function Headline(props) {
     </div>
   );
 }
+
+Headline.propTypes = {
+  header: PropTypes.string,
+  desc: PropTypes.string,
+};
 
 export default Headline;
